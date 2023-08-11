@@ -1,0 +1,22 @@
+{
+  "contact": [
+    {
+      "name": "Charitha R",
+      "email": "char18cs014@rmkcet.ac.in",
+      "message": "Hello",
+      "id": 1
+    },
+    {
+      "name": "Theertha R",
+      "email": "thee@gmail.com",
+      "message": "Hello, hi",
+      "id": 2
+    },
+    {
+      "name": "Nithya K",
+      "email": "nith@gmail.com",
+      "message": "Hi..",
+      "id": 3
+    }
+  ]
+}

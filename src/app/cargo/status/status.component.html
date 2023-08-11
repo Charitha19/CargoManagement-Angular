@@ -1,0 +1,33 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type of Packaging</th>
+            <th>Quantity</th>
+            <th>Weight</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Total Price</th>
+            <th>Delievery Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let orders of order">
+            <td>{{orders.id}}</td>
+            <td>{{orders.productName}}</td>
+            <td>{{orders.type}}</td>
+            <td>{{orders.quantity}}</td>
+            <td>{{orders.weight|weight}}</td>
+            <td>{{orders.source}}</td>
+            <td>{{orders.destination}}</td>
+            <td>{{orders.weight|payment:orders.quantity:orders.type|currency}}</td>
+            <td>{{orders.status}}</td>
+            <td><a class="btn btn-danger" [routerLink]="['/cargo/cancel',orders.id]">Cancel</a></td>
+          </tr>
+    </tbody>
+</table>
+
+
+<app-cargo-home></app-cargo-home>

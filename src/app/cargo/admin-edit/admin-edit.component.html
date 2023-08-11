@@ -1,0 +1,45 @@
+<h4 class="text-center">Update Data</h4>
+
+<div class="container-fluid">
+    <form>
+<div>
+    <label for="userName">User Name:</label>
+    <input type="text" class="form-control" id="userName" [(ngModel)]="addOrderForm.userName" name="userName" readonly>
+  </div>
+  <div>
+    <label for="productName">Product Name:</label>
+    <input type="text" class="form-control" id="productName" [(ngModel)]="addOrderForm.productName" name="productName" readonly>
+  </div>
+  <!-- <div>
+    <label for="status">Status:</label>
+    <input type="text" class="form-control" id="status" [(ngModel)]="addOrderForm.status" name="status">
+  </div> -->
+  <div>
+    <label for="type">Type of Delivery Status:</label>
+    <select class="form-control" id="type" [(ngModel)]="addOrderForm.status" name="status" placeholder="Select the type of delivery status" required>
+      <option value="">Select Type</option>
+      <option value="Delivered">Delivered</option>
+      <option value="On the way">On the way</option>
+      <option value="Shipped">Shipped</option>
+      <option value="Pending">Pending</option>
+    </select>
+  </div>
+  <div>
+    <label for="paymentStatus">Payment Status:</label>
+    <input type="text" class="form-control" id="paymentStatus" [(ngModel)]="addOrderForm.paymentStatus" name="paymentStatus" readonly>
+  </div>
+  <!-- <div>
+    <label for="type">Type of Paid Status:</label>
+    <select class="form-control" id="type" [(ngModel)]="addOrderForm.paymentStatus" name="paymentStatus" placeholder="Select the type of payment status" required>
+      <option value="">Select Type</option>
+      <option value="Paid">Paid</option>
+      <option value="Unpaid">Unpaid</option>
+    </select>
+  </div> -->
+
+
+<button type="button" class="btn btn-info" (click)="update()">Update Data</button>
+</form>
+</div>
+
+

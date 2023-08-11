@@ -1,0 +1,142 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div>
+      <label for="id"><b>Id:</b></label>
+      <input type="number" class="form-control" id="id" [(ngModel)]="addItemsForm.id" name="id" readonly>
+    </div>
+    <div>
+      <label for="userName"><b>User Name:</b></label>
+      <input type="text" class="form-control" id="userName" [(ngModel)]="addItemsForm.userName" name="userName" placeholder="Enter your name" required>
+    </div>
+    <div>
+      <label for="productName"><b>Product Name:</b></label>
+      <input type="text" class="form-control" id="productName" [(ngModel)]="addItemsForm.productName" name="productName" placeholder="Enter the product name" required>
+    </div>
+    <div>
+      <label for="type"><b>Type of Delivery:</b></label>
+      <select class="form-control" id="type" [(ngModel)]="addItemsForm.type" name="type" placeholder="Select the type of packaging" required>
+        <option value="">Select Type</option>
+        <option value="Box">Box</option>
+        <option value="Crate">Crate</option>
+        <option value="Bagged Cargo">Bagged Cargo</option>
+        <option value="Containers">Containers</option>
+      </select>
+    </div>
+    <div>
+      <label for="quantity"><b>Quantity:</b></label>
+      <input type="number" class="form-control" id="quantity" [(ngModel)]="addItemsForm.quantity" name="quantity" required>
+    </div>
+    <div>
+      <label for="weight"><b>Weight:</b></label>
+      <input type="text" class="form-control" id="weight" [(ngModel)]="addItemsForm.weight" name="weight" required>
+    </div>
+    <div>
+      <label for="source"><b>Source:</b></label>
+      <input type="text" class="form-control" id="source" [(ngModel)]="addItemsForm.source" name="source" placeholder="Enter the source" required>
+    </div>
+    <div>
+      <label for="destination"><b>Destination:</b></label>
+      <input type="text" class="form-control" id="destination" [(ngModel)]="addItemsForm.destination" name="destination" placeholder="Enter the destination" required>
+    </div>
+    <div>
+      <label for="totalPrice"><b>Total Price:</b></label>
+      <input type="number" value="{{ addItemsForm.weight | payment: addItemsForm.quantity:addItemsForm.type }}" class="form-control" id="totalPrice" [(ngModel)]="addItemsForm.totalPrice" name="totalPrice" required>
+    </div><br><br>
+
+
+    <button type="submit" class="btn btn-warning" [disabled]="form.invalid"  (click)="addItems()">Place Order</button>
+<span style="margin-left: 10px;"></span> <br><br>
+
+
+<!-- <div>
+  <label for="type"><b>Type of Payment:</b></label>
+  <select class="form-control" id="type" [(ngModel)]="addItemsForm.type" name="type" placeholder="Select the type of packaging" required (click)="onPaymentTypeChange()">
+    <option value="">Select Type</option>
+    <option value="beforeDelivery">Before delivery</option>
+    <option value="afterDelivery">After delivery</option>
+  </select>
+</div> -->
+
+
+</form><br><br>
+</div>
+
+<button type="submit" class="btn btn-primary" (click)="paynow()">Make Payment</button>
+
+
+ 
+
+  <!-- <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="container">
+            <form (ngSubmit)="onSubmit()" #form="ngForm">
+              <div>
+                <label for="id"><b>Id:</b></label>
+                <input type="number" class="form-control" id="id" [(ngModel)]="addItemsForm.id" name="id" required>
+              </div>
+              <div>
+                <label for="userName"><b>User Name:</b></label>
+                <input type="text" class="form-control" id="userName" [(ngModel)]="addItemsForm.userName" name="userName" placeholder="Enter your name" required>
+              </div>
+              <div>
+                <label for="productName"><b>Product Name:</b></label>
+                <input type="text" class="form-control" id="productName" [(ngModel)]="addItemsForm.productName" name="productName" placeholder="Enter the product name" required>
+              </div>
+              <div>
+                <label for="type"><b>Type of Delivery:</b></label>
+                <select class="form-control" id="type" [(ngModel)]="addItemsForm.type" name="type" placeholder="Select the type of packaging" required>
+                  <option value="">Select Type</option>
+                  <option value="Box">Box</option>
+                  <option value="Crate">Crate</option>
+                  <option value="Bagged Cargo">Bagged Cargo</option>
+                  <option value="Containers">Containers</option>
+                </select>
+              </div>
+              <div>
+                <label for="quantity"><b>Quantity:</b></label>
+                <input type="number" class="form-control" id="quantity" [(ngModel)]="addItemsForm.quantity" name="quantity" required>
+              </div>
+              <div>
+                <label for="weight"><b>Weight:</b></label>
+                <input type="text" class="form-control" id="weight" [(ngModel)]="addItemsForm.weight" name="weight" required>
+              </div>
+              <div>
+                <label for="source"><b>Source:</b></label>
+                <input type="text" class="form-control" id="source" [(ngModel)]="addItemsForm.source" name="source" placeholder="Enter the source" required>
+              </div>
+              <div>
+                <label for="destination"><b>Destination:</b></label>
+                <input type="text" class="form-control" id="destination" [(ngModel)]="addItemsForm.destination" name="destination" placeholder="Enter the destination" required>
+              </div>
+              <div>
+                <label for="totalPrice"><b>Total Price:</b></label>
+                <input type="number" value="{{ addItemsForm.weight | payment: addItemsForm.quantity:addItemsForm.type }}" class="form-control" id="totalPrice" [(ngModel)]="addItemsForm.totalPrice" name="totalPrice" required>
+              </div><br><br>
+          
+          
+              <button type="submit" class="btn btn-warning" [disabled]="form.invalid"  (click)="addItems()">Place Order</button>
+          <span style="margin-left: 10px;"></span> <br><br>
+        </td>
+        <td>
+          <div>
+            <label for="type"><b>Type of Payment:</b></label>
+            <select class="form-control" id="type" [(ngModel)]="addItemsForm.type" name="type" placeholder="Select the type of packaging" required (change)="onPaymentTypeChange()">
+              <option value="">Select Type</option>
+              <option value="beforeDelivery">Before delivery</option>
+              <option value="afterDelivery">After delivery</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+  <app-cargo-home></app-cargo-home>
+ 

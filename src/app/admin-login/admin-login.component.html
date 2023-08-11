@@ -1,0 +1,13 @@
+<h1 style="text-align: center;">Admin Login</h1>
+
+<div class="container-fluid">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <label>User Name :</label>
+            <input type="text" formControlName="username"><br><br>
+            <label>Password :</label>
+            <input type="password" formControlName="password"><br><br>
+            <button class="btn btn-primary">Login</button><br><br>
+        </form>
+</div>
+
+

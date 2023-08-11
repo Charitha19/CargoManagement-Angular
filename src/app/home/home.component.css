@@ -1,0 +1,21 @@
+/* body {
+    background-image: url(/assets/cargoManagement.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+
+  .bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  div span button {
+    margin-right: 10px; 
+
+  }
+
+  .btn {
+    text-decoration: none; 
+  }
+  
+  

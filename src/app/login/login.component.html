@@ -1,0 +1,13 @@
+<h1 style="text-align: center;">Login</h1>
+
+<div class="container-fluid">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <label>Email Id :</label>
+            <input type="text" formControlName="email"><br><br>
+            <label>Password :</label>
+            <input type="password" formControlName="password"><br><br>
+            <button class="btn btn-primary">Login</button><br><br>
+            <span>Don't you have an account? <a routerLink="/signup" class="text-danger">Signup</a></span>
+        </form>
+</div>
+

@@ -1,0 +1,11 @@
+{
+  "adminLoginDetails": [
+    {
+      "username": "Admin",
+      "mobileno": "1234567890",
+      "email": "admin@gmail.com",
+      "password": "admin@321",
+      "id": 1
+    }
+  ]
+}

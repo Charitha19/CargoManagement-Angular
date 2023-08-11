@@ -1,0 +1,53 @@
+{
+  "userLists": [
+    {
+      "username": "Charitha R",
+      "mobileno": "1234567890",
+      "email": "char@test.com",
+      "password": "abcdefgh",
+      "id": 1
+    },
+    {
+      "username": "Theertha R",
+      "mobileno": "0987654321",
+      "email": "theer@abc.com",
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "username": "Siri K",
+      "mobileno": "5678901234",
+      "email": "siri@gmail.com",
+      "password": "siri@34567",
+      "id": 3
+    },
+    {
+      "username": "Neha K",
+      "mobileno": "6789054321",
+      "email": "neha@gmail.com",
+      "password": "neha@321",
+      "id": 4
+    },
+    {
+      "username": "Nithya K",
+      "mobileno": "0987654321",
+      "email": "nith@gmail.com",
+      "password": "nith@321",
+      "id": 5
+    },
+    {
+      "username": "Priya M",
+      "mobileno": "6789054321",
+      "email": "priya@gmail.com",
+      "password": "abcd1234",
+      "id": 6
+    },
+    {
+      "username": "Ritu M",
+      "mobileno": "5432167890",
+      "email": "ritu@gmail.com",
+      "password": "abcdfg123",
+      "id": 7
+    }
+  ]
+}

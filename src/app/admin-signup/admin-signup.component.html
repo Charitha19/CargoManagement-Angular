@@ -1,0 +1,23 @@
+<h1 style="text-align: center;">Signup</h1>
+
+<div class="container-fluid">
+    <div class="text-center">
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+            <label>Username :</label>
+            <input type="text" formControlName="username">
+            <span><b id="exclamatory" *ngIf="username && username.invalid && username.touched">*Please fill out this</b></span><br><br>
+            <label>Mobile number :</label>
+            <input type="text" formControlName="mobileno">
+            <span><b id="exclamatory" *ngIf="mobileno && mobileno.invalid && mobileno.touched">*Please fill out this</b></span><br><br>
+            <label>Email id :</label>
+            <input type="text" formControlName="email">
+            <span><b id="exclamatory" *ngIf="email && email.invalid && email.touched">*Please fill out this</b></span><br><br>
+            <label>Password :</label>
+            <input type="password" formControlName="password"><br><br>
+            
+            <button [disabled]="signupForm.invalid">Signup</button><br><br>
+            <span>Already have an account? <a routerLink="/login">Login</a></span>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,14 @@
+input {
+    max-width: 700px;
+    border-radius: 2px;
+    border-color:light grey;
+  }
+  label{
+    font-family:  strong bold;
+    font-size: 20px;
+  }
+  select {
+    max-width: 700px;
+    border-radius: 2px;
+    border-color:light grey;
+  }
